@@ -1,0 +1,43 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ---- Virtual Environment ----
+venv/
+.env/
+.venv/
+
+# ---- Flask ----
+instance/
+*.log
+
+# ---- Data Science / Jupyter ----
+.ipynb_checkpoints/
+.notebooks/
+notebook/
+*.ipynb
+
+# ---- Data Files ----
+data/
+csv/
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+*.npy
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE files ----
+.vscode/
+.idea/
+

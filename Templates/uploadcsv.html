@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .upload_container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .upload_container h2 {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 2px dashed #a0c4ff;
+            border-radius: 10px;
+            width: 100%;
+            background: #f8faff;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        input[type="file"]:hover {
+            border-color: #4f8ef7;
+            background: #eef4ff;
+        }
+        button {
+            background: #4f8ef7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #3b6dd8;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="upload_container">
+        <h2>Upload Your CSV</h2>
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label for="file">Choose a CSV File</label>
+            <input type="file" id="file" name="file" accept=".csv" required>
+            <button type="submit">Submit</button>
+            <div class="abc"></div>
+        </form>
+    </div>
+    <script>
+      const upload_container = document.querySelector('.upload_container');
+      const fileInput = document.getElementById('file');
+      const stat_bar=document.getElementsByClassName('abc')
+      const submitButton = document.querySelector('button[type="submit"]');
+      submitButton.addEventListener(onclick ,()=>{
+          if(fileInput.length){
+             stat_bar.innerText='download_processing'
+             
+             setTimeout(function(){
+                stat_bar.innerHTML='download success'
+             },3000)
+             
+
+          }
+      })
+    </script>
+    
+</body>
+</html>
+
