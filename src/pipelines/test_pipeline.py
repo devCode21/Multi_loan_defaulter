@@ -15,6 +15,7 @@ class train_model_config:
     artifacts='artifacts'
     model='model.pkl'
     store_csv='test_data.csv'
+    form_data_stored='new.pkl'
     
 
 
@@ -44,7 +45,17 @@ class test_Csv_Data :
     
 
 class test_form_Data:
-    pass
+    # from  train model selcting import features 
+    def __init__(self):
+        self.config =train_model_config()
+    
+    def  predict_form_Data(self , data):
+        Data=[data]
+        new_Data =pd.DataFrame(data)
+        new_Data.to_csv('new.csv')
+        df=test_Csv_Data.test_Csv_data(self.config.form_data_stored)
+        return df['Target']
+        
 
 
 
