@@ -22,7 +22,6 @@ instance/
 .ipynb_checkpoints/
 .notebooks/
 notebook/
-test/
 *.ipynb
 
 # ---- Data Files ----
