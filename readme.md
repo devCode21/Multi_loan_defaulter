@@ -48,10 +48,10 @@ This project predicts loan defaulters using data analysis, a production-ready ba
 
 The final XGBoost model achieved the following metrics on the test set:
 
-- **Accuracy:** ~0.90  
-- **F1 Score:** ~0.57  
-- **Recall:** ~0.52  
-- **Precision:** ~0.63  
+- **Accuracy:** ~0.90
+- **F1 Score:** ~0.93->class 0 && 0.32->class 1
+- **Recall:** ~0.91 ->class 1 && .37 ->class 1
+- **Precision:** ~0.94 ->class 0 && .26->clss1
 
 >
 ## Model Development
