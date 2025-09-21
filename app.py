@@ -5,10 +5,10 @@ app=Flask(__name__)
 
 @app.route('/')
 def home_page():
-    return "hello world"
+    return render_template('Home_page.html')
 
 
-@app.route('/prediction' )
+@app.route('/csv_data' )
 def Prediction_to_csv():
     return render_template('uploadcsv.html')
 
@@ -33,7 +33,12 @@ def predict():
         download_name="test_data.csv"
     )
 
+
+@app.route('/form_data')
+def form_data():
+    return render_template('form_data.html')
     
 
 if __name__=='__main__':
-    app.run(debug=True)
+    print('Starting Flask App')
+    app.run(debug=True ,host='127.0.0.1', port=5000)

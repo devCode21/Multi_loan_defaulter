@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Defaulter Detection</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8f9fb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #4e73df;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4e73df, #1cc88a);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #1cc88a, #4e73df);
+    }
+
+    footer {
+      background: #222;
+      color: #bbb;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.2rem;
+      }
+      .card h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Loan Defaulter Detection
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Upload CSV Option -->
+      <div class="card" onclick="location.href='csv_data'">
+        <h2>📂 Upload CSV File</h2>
+        <p>Test the model by uploading a CSV file containing loan applicant data.</p>
+        <a href="csv_data" class="btn">Go to Upload</a>
+      </div>
+
+      <!-- Add Form Data Option -->
+      <div class="card" onclick="location.href='form.html'">
+        <h2>📝 Add Form Data</h2>
+        <p>Enter applicant details manually to check loan defaulter status.</p>
+        <a href="form.html" class="btn">Go to Form</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Loan Defaulter App | Designed with ❤️
+  </footer>
+</body>
+</html>
