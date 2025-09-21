@@ -41,11 +41,7 @@ class DataTransform:
           
           # oultlier treatment 
           logging.info("Outlier treatment started ")
-          for i in num_columns:
-               IQR=X[i].quantile(.75)-X[i].quantile(.25)
-               UL=X[i].quantile(.75)+ 1.5*IQR
-               LL=X[i].quantile(.25)- 1.5*IQR
-               X[i] = X[i].apply(lambda x: UL if x > UL else LL if x < LL else x)
+          
 
 
           X_train ,X_test ,y_train , y_test =train_test_split(X, Y, test_size=0.3 ,random_state=42) 

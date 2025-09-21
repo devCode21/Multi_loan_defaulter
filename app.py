@@ -1,4 +1,18 @@
-from flask import Flask ,render_template,request ,send_file
+from flask import Flask, render_template, request, send_file
+"""
+Flask web application for multi-loan defaulter prediction.
+Routes:
+    - '/' (GET): Renders the home page.
+    - '/csv_data' (GET): Renders the CSV upload page.
+    - '/predict' (POST): Accepts a CSV file upload, processes it using the test_Csv_Data pipeline, and returns the processed CSV file as a download.
+    - '/form_data' (GET): Renders the form data input page.
+Modules:
+    - flask: For web framework and request handling.
+    - src.pipelines.test_pipeline: Contains the test_Csv_Data class for processing uploaded CSV files.
+    - os: For file path operations.
+Usage:
+    Run this script to start the Flask development server on localhost:5000.
+"""
 from src.pipelines.test_pipeline import test_Csv_Data
 import os
 app=Flask(__name__)
