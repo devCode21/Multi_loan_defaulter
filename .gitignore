@@ -20,8 +20,6 @@ instance/
 
 # ---- Data Science / Jupyter ----
 .ipynb_checkpoints/
-.notebooks/
-notebook/
 *.ipynb
 
 # ---- Data Files ----
