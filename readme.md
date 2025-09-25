@@ -12,7 +12,7 @@ The solution helps financial institutions in assessing loan risks, improving cre
 ---
 
 ## 📊 Data Analysis
-Performed in Jupyter Notebook: [`notebooks/data_analysis.ipynb`](./notebooks/data_analysis.ipynb)  
+Performed in Jupyter Notebook: [`notebooks/data_analysis.ipynb`](./notebook/Notebook.ipynb)  
 
 ### 🔹 Key Steps
 - **Data Loading & Exploration**  
